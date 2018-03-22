@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+
+::selection {
+  color: none;
+  background: none
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  height:95vh;
+  //border: 5px dotted green
+}
+
+h1 {
+  position: relative;
+  margin: auto;
+  font-family: IM Fell DW Pica,Times New Roman,Serif;
+  font-style: bold;
+  font-size: 3.6vh;
+  top: 24%;
+  color: white;
+}
+
+#info {
+  display: none;
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  position: relative;
+  background: url("https://www.dropbox.com/s/2h7nsac6ezd9f3y/menu.png?raw=1") no-repeat;
+  background-size: 100% 100%;
+  top: 20%;
+  padding-top: -17%;
+  padding-right: 2%;
+  padding-left: 3%;
+}
+
+#back {
+  display: none;
+  height: 10%;
+  width: 10%;
+  margin-left: 61%;
+  margin-top: 10%;
+  position: relative;
+  background: url("https://www.dropbox.com/s/2h7nsac6ezd9f3y/menu.png?raw=1") no-repeat;
+  background-size: 100% 100%;
+  padding-left: 5%;
+  padding-right: -2%;
+  cursor: pointer;
+}
+
+#bg {
+  background: url("https://www.dropbox.com/s/tuc2tym2ml6m7tu/darker%20forest.jpg?raw=1") no-repeat center center fixed;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-left: 10.5%;
+  margin-right: 10.5%;
+  width: auto;
+  height: 100%;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  //border: 5px solid red
+}
+
+.menu {
+  display:
+  position: relative;
+  //border: 5px dashed blue;
+  height: 100%;
+}
+
+.menuchoices {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  margin: auto;
+  top: 35%;
+  //border: 5px solid yellow;
+}
+
+.menuchoices div {
+    text-align: center;
+    width: 30%;
+    height: 26%;
+    position: relative;
+    display: block;
+    margin: 8px 35%;
+    background: url("https://www.dropbox.com/s/2h7nsac6ezd9f3y/menu.png?raw=1") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.playerchoices div {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 23%;
+    position: relative;
+    margin: 6px auto;
+    background: url('https://www.dropbox.com/s/9n2493ydh29ia5z/goodmenu.png?raw=1') no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    padding-top: 2.7%;
+}
+
+p {
+  position: relative;
+  margin: auto;
+  font-family: IM Fell DW Pica;
+  font-style: bold;
+  font-size: 4vh;
+  //color: #f2f0ea;
+  color:#e8dec2;
+  opacity: 0.9;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+.playerchoices {
+  position: absolute;
+  height: 35%;
+  width: 55%;
+  right: 4.6%;
+  bottom: 1.6%;
+  z-index: 1
+  //border: 5px dotted red
+}
+
+.action {
+  display: none;
+  position: relative;
+  //border: 5px dashed purple;
+  height: 100%;
+}
+
+.text {
+  position: absolute;
+  height: 22%;
+  width: 85%;
+  margin-top: 3%;
+  margin-left: 5.5%;
+  background: url("https://www.dropbox.com/s/ga348ag4zba6w22/textbest.png?raw=1") no-repeat;
+  background-size: 100% 100%;
+  padding-left: 1.5%;
+  padding-right: 1%;
+  padding-top: 1.3%;
+  cursor: default;
+}
+
+
+.speaker {
+  height:80%;
+  width: 45%;
+  //border: 5px solid white;
+  position: absolute;
+  background: url("https://www.dropbox.com/s/k585jnpph53w85c/betterman.png?raw=1") no-repeat;
+  background-size: contain;
+  bottom:0px;
+  display: none;
+}
