@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-  <audio id="theme" src="https://www.dropbox.com/s/o0btedcs2dz6t7w/theme%20%281%29.mp3?raw=1" type="audio/mp3"></audio>
-  <div id="bg">
-    <div class="menu">
-      <div class="menuchoices">
-        <div id="play"><h1>Play</h1></div>
-        <div id="options"><h1>Options</h1></div>
-        <div id="about"><h1>About</h1></div>
-      </div>
-    </div>
-    
-    <div id="info"><h1>Based on "Der Erlkönig" by Franz Schubert <br> Developed March 2017 by Noah Goodman with lots of help from stackoverflow.com and w3schools.com for javascript and CSS reference</h1></div>
-    <div id="back"><h1>Back</h1></div>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Der Erlkönig Game</title>
+  </head>
 
-    <div class="action">
-      
-      <audio id="nacht" src="https://www.dropbox.com/s/8hw0jkn91lvcy0q/werReiterSoSpat.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="vater" src="https://www.dropbox.com/s/1piv7jo591z1vsc/esIstDerVater.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="meinSohn" src="https://www.dropbox.com/s/bni7kq7u0sx8x8w/wasSiehstDu.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="nebel" src="https://www.dropbox.com/s/ldabtzzhudtptzu/Nebelstreif.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="blumen" src="https://www.dropbox.com/s/a6cfek5op81hhb9/BlumenAnDenStrand%20%282%29.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="blaetten" src="https://www.dropbox.com/s/imkip1zxz6lh8bj/Blaetten.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="tochter" src="https://www.dropbox.com/s/k7kwfo25xdiyvp5/Tochter.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="ichSehEs" src="https://www.dropbox.com/s/xz1tptdwjwd33h0/ichSehEsGenau.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="gewalt" src="https://www.dropbox.com/s/vkwtrtisfy2vcof/GEWALT.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="leids" src="https://www.dropbox.com/s/ekn06ragspvfmml/meinVater.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="derVater" src="https://www.dropbox.com/s/ovvsnicln2un7qv/derVaterGesauset.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="tot" src="https://www.dropbox.com/s/x64qa87x3retrsl/warTot.mp3?raw=1" type="audio/mp3"></audio>
-      <audio id="dasKind" src="https://www.dropbox.com/s/uunbd9o4584fgb9/warTot%20%281%29.mp3?raw=1" type="audio/mp3"></audio>
-      
-      <div class="text"><p></p></div>
-      <div class="speaker"></div>
-      <div class="playerchoices">
-        <div id="r1"><p></p></div>
-        <div id="r2"><p></p></div>
-        <div id="r3"><p></p></div>
+  <body>
+    <audio id="theme" src="resources/audio/theme.mp3" type="audio/mp3"></audio>
+    <div id="bg">
+      <div class="menu">
+        <div class="menuchoices">
+          <div id="play"><h1>Play</h1></div>
+          <div id="options"><h1>Options</h1></div>
+          <div id="about"><h1>About</h1></div>
+        </div>
       </div>
-    </div>
 
-  </div>
-</body>
+      <div id="info"><h1>Based on "Der Erlkönig" by Franz Schubert <br> Developed March 2017 by Noah Goodman with lots of help from stackoverflow.com and w3schools.com for javascript and CSS reference</h1></div>
+      <div id="back"><h1>Back</h1></div>
+
+      <div class="action">
+
+        <audio id="reitet" src="resources/audio/werReitetSoSpat.mp3" type="audio/mp3"></audio>
+        <audio id="vater" src="resources/audio/esIstDerVater.mp3" type="audio/mp3"></audio>
+        <audio id="meinSohn" src="resources/audio/wasSiehstDu.mp3" type="audio/mp3"></audio>
+        <audio id="nebel" src="resources/audio/nebelstreif.mp3" type="audio/mp3"></audio>
+        <audio id="blumen" src="resources/audio/blumen.mp3" type="audio/mp3"></audio>
+        <audio id="blaetten" src="resources/audio/blaettern.mp3" type="audio/mp3"></audio>
+        <audio id="tochter" src="resources/audio/tochter.mp3" type="audio/mp3"></audio>
+        <audio id="ichSehEs" src="resources/audio/ichSehEsGenau.mp3" type="audio/mp3"></audio>
+        <audio id="gewalt" src="resources/audio/gewalt.mp3" type="audio/mp3"></audio>
+        <audio id="leids" src="resources/audio/meinVater.mp3" type="audio/mp3"></audio>
+        <audio id="derVater" src="resources/audio/demVaterGrausets.mp3" type="audio/mp3"></audio>
+        <audio id="tot" src="resources/audio/warTot.mp3" type="audio/mp3"></audio>
+        <audio id="dasKind" src="resources/audio/dasKind.mp3" type="audio/mp3"></audio>
+
+        <div class="text"><p></p></div>
+        <div class="speaker"></div>
+        <div class="playerchoices">
+          <div id="r1"><p></p></div>
+          <div id="r2"><p></p></div>
+          <div id="r3"><p></p></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>

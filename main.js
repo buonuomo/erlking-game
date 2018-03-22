@@ -9,12 +9,12 @@ var r2p = $("#r2 p");
 var r3p = $("#r3 p");
 
 var father = function() {
-  speaker.css("background-image","url('https://www.dropbox.com/s/k585jnpph53w85c/betterman.png?raw=1')");
+  speaker.css("background-image","resources/betterman.png");
   speaker.css("display","block");
 };
 
 var erlking = function() {
-  speaker.css("background-image","url('https://www.dropbox.com/s/8xaf6ypmu66kk7n/erlman3.png?raw=1')");
+  speaker.css("background-image","resources/erlman3.png");
 }
 
 var narrate = function(narration) {
@@ -99,10 +99,10 @@ var adventure = function() {
   $('#theme')[0].pause();
   narrate("It is a dark and stormy night...");
   options(1);
-  $('#nacht')[0].play();
+  $('#reitet')[0].play();
   r1p.text("Continue")
   r1.click(function() {
-    $('#nacht')[0].pause();
+    $('#reitet')[0].pause();
     narrate("...You are riding through the woods with your father. He is holding you warmly in his arms.");
     father();
     $('#vater')[0].play();
@@ -128,7 +128,7 @@ function preload(arrayOfImages) {
 
 $(document).ready(function() {
     
-  preload(['https://www.dropbox.com/s/k585jnpph53w85c/betterman.png?raw=1','https://www.dropbox.com/s/8xaf6ypmu66kk7n/erlman3.png?raw=1','https://www.dropbox.com/s/4r11y1vkizrmp4y/dark%20forest.jpg?raw=1',"https://www.dropbox.com/s/2h7nsac6ezd9f3y/menu.png?raw=1",'https://www.dropbox.com/s/9n2493ydh29ia5z/goodmenu.png?raw=1',"https://www.dropbox.com/s/ga348ag4zba6w22/textbest.png?raw=1"]);
+  preload(['resources/betterman.png','resources/erlman3.png','resources/forest.jpg',"resources/menu.png",'resources/goodmenu.png',"resources/textbest.png"]);
   
   $("#theme")[0].play();
   $("#play").click(function() {
