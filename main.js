@@ -1,47 +1,47 @@
-var bg = $("#bg");
-var speaker = $(".speaker");
-var text = $(".text p");
-var r1 = $("#r1");
-var r2 = $("#r2");
-var r3 = $("#r3");
-var r1p = $("#r1 p");
-var r2p = $("#r2 p");
-var r3p = $("#r3 p");
+const bg = "#bg",
+      speaker = ".speaker",
+      text = ".text p",
+      r1 = "#r1",
+      r2 = "#r2",
+      r3 = "#r3",
+      r1p = "#r1 p",
+      r2p = "#r2 p",
+      r3p = "#r3 p";
 
-var father = function() {
-  speaker.css("background-image","resources/betterman.png");
-  speaker.css("display","block");
+function father() {
+  $(speaker).css("background-image","url('resources/betterman.png')");
+  $(speaker).css("display","block");
 };
 
-var erlking = function() {
-  speaker.css("background-image","resources/erlman3.png");
+function erlking() {
+  $(speaker).css("background-image","url('resources/erlman3.png')");
 }
 
-var narrate = function(narration) {
-  text.text(narration);
+function narrate(narration) {
+  $(text).text(narration);
 };
 
-var options = function(n) {
+function options(n) {
   if (n === 1) {
-    r1.show();
-    r2.hide();
-    r3.hide();
+    $(r1).show();
+    $(r2).hide();
+    $(r3).hide();
   } else if (n === 2) {
-    r1.show();
-    r2.show();
-    r3.hide();
+    $(r1).show();
+    $(r2).show();
+    $(r3).hide();
   } else if (n===3) {
-    r1.show();
-    r2.show();
-    r3.show();
+    $(r1).show();
+    $(r2).show();
+    $(r3).show();
   } else {
-    r1.hide();
-    r2.hide();
-    r3.hide();
+    $(r1).hide();
+    $(r2).hide();
+    $(r3).hide();
   }
 }
 
-var plot = [
+const plot = [
    [erlking,3,1,1,2,"THE ERLKING!!!","Look away","SCREAM!!!","Stare him in the eyes","#theme"],
    [father,2,3,4,"What is the matter, my son?","Nothing","It's the Erlking!!!","#meinSohn"],
    [erlking,0,"The Erlking stares back at you and you DIE.","#dasKind"],
@@ -64,13 +64,13 @@ var plot = [
 
 var oldSong = "h";
 var song = "h";
-var makeScreen = function(key) {
+function makeScreen(key) {
   plot[key][0]();
   options(plot[key][1]);
   narrate(plot[key][2+plot[key][1]]);
-  r1p.text(plot[key][3+plot[key][1]]);
-  r2p.text(plot[key][4+plot[key][1]]);
-  r3p.text(plot[key][5+plot[key][1]]);
+  $(r1p).text(plot[key][3+plot[key][1]]);
+  $(r2p).text(plot[key][4+plot[key][1]]);
+  $(r3p).text(plot[key][5+plot[key][1]]);
   oldSong = song;
   song = plot[key][plot[key].length-1]
   if (oldSong[0] == "#") {
@@ -79,15 +79,15 @@ var makeScreen = function(key) {
   if (song[0] == "#") {
     $(song)[0].play();
   }
-  r1.click(function() {
+  $(r1).click(function() {
     oldKey = key;
     newKey = plot[key][2];
   })
-  r2.click(function() {
+  $(r2).click(function() {
     oldKey = key;
     newKey = plot[key][3];
   })
-  r3.click(function() {
+  $(r3).click(function() {
     oldKey = key;
     newKey = plot[key][4];
   })
@@ -95,22 +95,22 @@ var makeScreen = function(key) {
 
 var oldKey
 var newKey = 0;
-var adventure = function() {
+function adventure() {
   $('#theme')[0].pause();
   narrate("It is a dark and stormy night...");
   options(1);
   $('#reitet')[0].play();
-  r1p.text("Continue")
-  r1.click(function() {
+  $(r1p).text("Continue")
+  $(r1).click(function() {
     $('#reitet')[0].pause();
     narrate("...You are riding through the woods with your father. He is holding you warmly in his arms.");
     father();
     $('#vater')[0].play();
-    r1.click(function() {
+    $(r1).click(function() {
       $('#vater')[0].pause();
       //$('#theme')[0].play();
       narrate("Suddenly...You see a dark form in the distance moving behind some trees. It's ...")
-      r1.click(function() {     
+      $(r1).click(function() {     
         $(".action").click(function() {
           makeScreen(newKey);
         });
@@ -124,7 +124,6 @@ function preload(arrayOfImages) {
     $('<img/>')[0].src = this;
   });
 }
-
 
 $(document).ready(function() {
     
